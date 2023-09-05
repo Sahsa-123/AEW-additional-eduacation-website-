@@ -1,0 +1,83 @@
+/*полиграфия*/
+body
+{
+    margin-top: 0px;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 2vmax;
+}
+h1{
+    margin-top: 0.5em;
+    margin-bottom:0.5em;
+    font-size: 4vmax;
+    color:#00008B;
+}
+p{
+    margin-bottom: 1em;
+}
+h4>span{
+    font-weight: lighter;
+}
+/*полиграфия*/
+
+/*стили изображений*/
+img {
+    width:15vmax;
+    height:15vmax;
+    border-radius: 50%;
+    margin: 0;
+}
+h4{
+    margin-bottom: 0px;
+}
+/*стили изображений*/
+
+/*формы*/
+form{
+    color:white;
+    background-color: rgb(67,149,209);
+    text-align: center;
+    border-radius: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    width: 12em;
+    margin: 0 auto;
+
+}
+input{
+    margin-bottom: 0.5em;
+}
+form p{
+    font-size: 2.5vmax;
+    margin-top: 0px;
+    margin-bottom: 0.5em;
+    font-family: monospace, Andale Mono;
+}
+form [type="password"]{
+    border:hidden;
+    outline: none;
+    font-size: 2.5vmax;
+    border-radius: 0.25em;
+    border :none
+}
+form [type="submit"]{
+    font-family: monospace, Andale Mono;
+    color:white;
+    margin-bottom: 0px;
+    background-color:green;
+    border: 0px;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    border:hidden;
+    outline: none;
+    font-size: 2.5vmax;
+
+}
+@media (min-width:920px){
+    form [type="submit"]:hover{
+        background-color:rgb(58, 189, 63);
+    }
+}
+/*формы*/

@@ -1,0 +1,285 @@
+/* Общие стили*/
+
+/*полиграфия*/
+body
+{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 2vmax;
+}
+h1{
+
+    margin-bottom: 0;
+    font-size: 4vmax;
+    margin-top: 0em;
+    color:#00008B;
+}
+span
+{
+    font-weight: bolder;
+}
+h4>span
+{
+    font-weight: lighter;
+}
+p{
+    margin-bottom: 2em;
+}
+/*полиграфия*/
+
+/*стили списков*/
+ul{
+    list-style: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-left: 3vmax;
+    margin-right: 3vmax;
+
+}
+li{
+        margin-bottom: 1em;
+    }
+.part_of_list>li{
+        margin-top: 1em;
+    }
+.part_of_list{
+        margin-bottom: 1em;
+    }
+.box-1 .part_of_list{
+        border-top: 0.1vmax solid grey;
+    
+    }
+.box-2 .part_of_list{
+        border-bottom: 0.1vmax solid grey;
+    }
+/*стили списков*/
+
+/*стили изображений*/
+img {
+    width:15vmax;
+    height:15vmax;
+    border-radius: 50%;
+    margin: 0;
+}
+/*стили изображений*/
+
+/*стили кнопки*/
+a{
+    display: inline-block;
+    margin-top: 0.5em;
+}
+.button{
+    background-color:ForestGreen;
+    color: #FFF;
+    border: 0px;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    border:hidden;
+    outline: none;
+    font-size: 2.5vmax;
+    transition: 0s;
+    text-decoration: none;
+}
+.button:active{
+    transition: 0s;
+    background-color: lightgreen;
+}
+/*стили кнопки*/
+
+/*флексбоксы*/
+.container
+{
+    display: flex;
+    display :-ms-flexbox;
+    display:-webkit-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*флексбоксы*/
+
+/*медиазапросы*/
+
+/*планшет горизонтально*/
+@media (min-width: 480px)  and (orientation:landscape)
+{
+    body{
+        font-size: 1.5vmax;
+    }
+    /*флексбоксы*/
+    .container{
+        flex-direction: row;
+    }
+    .box-1{
+        width:50%;
+    }
+    .box-2{
+        width: 50%;
+    }
+    /*флексбоксы*/
+
+    /*стили списков*/
+    ul{
+        text-align: left;
+    }
+    li{
+        margin-top: 0em;
+        margin-bottom: 0.5em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+    .part_of_list{
+        margin-bottom: 0.5em;
+    }
+    .part_of_list>li{
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    .img-info li{
+        margin-bottom: 0px;
+    }
+    .box-1 .part_of_list{
+        border-top: 0.1vmax solid grey;
+        border-bottom: 0.1vmax solid grey;
+    }
+    .box-1{
+        border-bottom: none;
+    }
+    .box-2 .part_of_list{
+            border-top: 0.1vmax solid grey;
+            border-bottom: 0.1vmax solid grey;
+        }
+    section.part_of_list{
+        border-bottom: 0.1vmax solid grey;
+    }
+    /*флексбоксы*/
+
+    /*картинки*/
+    img {
+        width:9.3vmax;
+        height:9.3vmax;
+        border-radius: 50%;
+        margin: 0;
+    }
+    /*картинки*/
+
+    /**/
+    .img-info{
+        display: flex;
+        display :-ms-flexbox;
+        display:-webkit-flex;
+        flex-direction: row;
+        align-items:center;
+        margin-bottom: 0.5em;
+    }
+    .box-21{
+        padding-left: 2em;
+    }
+    /**/
+
+    /*стили кнопки*/
+    .button{
+        font-size: 1.7vmax;
+    }
+    .button:active{
+        transition: 0.3s;
+    }
+    /*стили кнопки*/
+}
+/*планшет горизонтально*/
+
+/*планшет вертиально*/
+@media (min-width: 480px)  and (orientation:portrait)
+{
+    /*полиграфия*/
+    p{
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+    h4{
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+    /*полиграфия*/
+
+    /*стили списков*/
+    .box-1:last-child{
+        margin-bottom: 0px;
+    }
+    .box-2:first-child{
+        margin-top: 0px;
+    }
+    li{
+        margin-top: 0em;
+        margin-bottom: 0.5em;
+    }
+    .part_of_list{
+        margin-bottom: 0.5em;
+    }
+    .part_of_list>li{
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    /*стили списков*/
+}
+/*планшет вертиально*/
+
+/*большие планшеты и маленькие мониторы*/
+@media(min-width:992px) and (orientation:portrait){
+    body{
+        font-size: 1.5vmax;
+    }
+    img{
+        width: 9vmax;
+        height: 9vmax;
+    }
+}
+/*большие планшеты и маленькие мониторы*/
+
+/*большие мониторы*/
+@media(min-width:1200px) and (orientation:landscape){
+    /*флексбоксы*/
+    .container{
+        flex-direction: row;
+    }
+    .box-1{
+        width: 48%;
+        margin-left: 0px auto;
+    }
+    .box-2{
+        width: 48%;
+        margin-right: 0px auto;
+
+    }
+    /*флексбоксы*/
+
+    /*полграфия*/
+    body{
+        font-size: 1vmax;
+    }
+    /*полграфия*/
+
+    /*изображения*/
+    img {
+        width:8.7vmax;
+        height:8.7vmax;
+        border-radius: 50%;
+        margin: 0;
+    }
+    /*изображения*/
+
+    /*кнопка*/
+    .button{
+        font-size: 1.25vmax;
+    }
+    .button:hover{
+        background-color: rgb(58, 189, 63);
+        transition-duration: 0.3s;
+    }
+    /*кнопка*/
+
+}
+/*большие мониторы*/
+
+/*медиазапросы*/

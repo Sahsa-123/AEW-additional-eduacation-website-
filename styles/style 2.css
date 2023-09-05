@@ -1,0 +1,310 @@
+a.left{
+    float :left;
+}
+a.right{
+    float:right;
+}
+input[type="submit"]{
+    float:right;
+}
+.clearfix::after { 
+    content: '';
+    clear: both; 
+    display: block;
+   }
+
+/*полиграфия*/
+body
+{
+    margin-left: 1em;
+    margin-right: 1em;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 2vmax;
+}
+h1{
+
+    margin-bottom: 1rem;
+    font-size: 4vmax;
+    margin-top: 0em;
+    color:#00008B;
+}
+p{
+    text-indent: 1em;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.part_of_list>li{
+margin-top: 1em;
+}
+.part_of_list{
+margin-bottom: 1em;
+}
+/*полиграфия*/
+
+/*стили списка*/
+li{
+    margin-bottom: 1em;
+    list-style: none;
+}
+li:first-child{
+    margin-top: 1em;
+}
+ol>li{
+    font-weight: bolder;
+    text-align: center;
+}
+ol>li>ol>li{
+    text-align: left;
+    font-weight: normal;
+}
+ol{
+    padding-left: 0px;
+    counter-reset: list1;
+    text-align: left;
+}
+ol.ext-0{
+    counter-reset: list1 2;
+}
+ol.ext{
+    counter-reset: list1 4;
+}
+ol.second_part{
+    padding-left: 0px;
+    counter-reset: list1 3;
+}
+li.second_part{
+    text-align: left;
+    font-weight: normal;
+    margin-bottom: 0.5em;
+}
+ol.second_part  li::before{
+    counter-increment: list1;
+    content: "8." counter(list1) " "; 
+}
+ol ol{
+    counter-reset: list2;
+    text-indent: 1em;
+}
+ol .second_part{
+    text-indent: 1em; 
+}
+ol ol ol{
+    counter-reset: list3;
+}
+ol ol ol ol{
+    counter-reset: list4;
+}
+ol li::before{
+    counter-increment: list1;
+    content: counter(list1) ". "; 
+}
+ol ol li::before{
+    counter-increment: list2; 
+    content: counter(list1) "." counter(list2) " ";
+}
+ol ol ol li::before{
+    counter-increment: list3; 
+    content: counter(list1) "." counter(list2) "." counter(list3)" "; 
+}
+ol ol ol ol li::before{
+    counter-increment: list4; 
+    content: counter(list1) "." counter(list2) "." counter(list3) "." counter(list4)" "; 
+}
+/*стили списка*/
+
+/*изображения*/
+img {
+    width:15vmax;
+    height:15vmax;
+    border-radius: 50%;
+    margin: 0;
+}
+/*изображения*/
+
+/*флексбоксы*/
+.container
+{
+    display: flex;
+    display :-ms-flexbox;
+    display:-webkit-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*флексбоксы*/
+
+/*таблица*/
+dl{
+    list-style: none;
+    text-align: left;
+}
+table{
+    border-spacing: 0px;
+    padding : 0px;
+    border-collapse: collapse ; 
+}
+td{
+    vertical-align: top;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    width: 50%;
+    border: 0.1em solid grey;
+    margin-right: 0px;
+}
+dl:first-child{
+    margin-top: 0.5em;
+}
+dl,dd{
+    margin: 0px;
+}
+dt{
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+dd{
+    margin-left: 0.5em;
+    margin-bottom: 1em;
+}
+/*таблица*/
+
+/*форма*/
+form{
+    text-align: left;
+}
+form  input{
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    vertical-align:baseline;
+}
+form [type="submit"]{
+    font-family: monospace, Andale Mono;
+    color:white;
+    margin-bottom: 0px;
+    background-color:green;
+    border: 0px;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    border:hidden;
+    outline: none;
+    font-size: 2.5vmax;
+
+}
+@media (min-width:920px){
+    form [type="submit"]:hover{
+        background-color:rgb(58, 189, 63);
+    }
+}
+/*стили кнопки*/
+.button{
+    text-decoration: none;
+    font-size: 2.5vmax;
+    display: inline-block;
+    background-color:green;
+    color: #FFF;
+    border: 0px;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    border:hidden;
+    outline: none;
+    margin-top: 1em;
+    transition: 0s;
+}
+.button:active{
+    transition: 0s;
+    background-color:rgb(58, 189, 63);
+}
+@media(min-width:920px){
+    .button:hover{
+        transition: 0s;
+        background-color: rgb(58, 189, 63);
+    }
+}
+/*стили кнопки*/
+
+
+
+/*медиазапросы*/
+
+/*планшеты горизонтально*/
+@media (min-width: 480px)  and (orientation:landscape)
+{
+    /*флексбоксы*/
+    .container{
+        flex-direction: row;
+    }
+    .box-1{
+        width:45%;
+        margin-left: 2em;
+        margin-right: 1em;
+    }
+    .box-2{
+        width: 45%;
+        margin-right: 2em;
+    }
+    /*флексбоксы*/
+
+    /*полграфия*/
+    body{
+        font-size: 1vmax;
+    }
+    /*полграфия*/
+
+    /*картинки*/
+    img {
+        width:9.3vmax;
+        height:9.3vmax;
+        border-radius: 50%;
+        margin: 0;
+    }
+    /*картинки*/
+
+    /*стили кнопки*/
+    .button{
+        font-size: 1vmax;
+    }
+    form [type="submit"]{
+        font-size: 1vmax;
+    }
+    /*стили кнопки*/
+}
+/*планшеты горизонтально*/
+
+/*планшеты вертикально*/
+@media (min-width: 480px)  and (orientation:portrait){
+    body{
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+    .last_of_second_part{
+        margin-bottom: 0px;
+    }
+    .box-2>ol{
+        margin-top: 0px;
+    }
+    .box-2>ol>li:first-child{
+        margin-top: 0px;
+    }
+}
+/*планшеты вертикально*/
+
+@media(min-width:1200px) and (orientation:landscape){
+    /*флексбоксы*/
+    .container{
+        flex-direction: row;
+    }
+    .box-1{
+        width:43%;
+        margin-left: 4em;
+        margin-right: 2em;
+
+    }
+    .box-2{
+        width: 43%;
+        margin-right: 4em;
+    }
+    /*флексбоксы*/
+}
